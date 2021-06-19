@@ -3,27 +3,18 @@
 
 // app.get("/", function (req, res) {
 //   // res.send("Working!");
-//   res.sendFile('./index.html');
 // });
 
+
+// app.listen(process.env.PORT || 5000);
+
+var express = require('express');
 var app = express();
+var path = require('path');
+
+// viewed at http://localhost:8080
 app.get('/', function(req, res) {
-    res.sendFile('index.html', {root: __dirname })
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.listen(process.env.PORT || 5000);
-
-// var http = require('http'),
-//     fs = require('fs');
-
-
-// fs.readFile('index.html', function (err, html) {
-//     if (err) {
-//         throw err; 
-//     }       
-//     http.createServer(function(request, response) {  
-//         response.writeHeader(200, {"Content-Type": "text/html"});  
-//         response.write(html);  
-//         response.end();  
-//     }).listen(8000);
-// });
+app.listen(8080);
