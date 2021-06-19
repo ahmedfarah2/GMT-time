@@ -1,9 +1,14 @@
-const express = require("express");
-const app = express();
+// const express = require("express");
+// const app = express();
 
-app.get("/", function (req, res) {
-  // res.send("Working!");
-  res.sendFile('./index.html');
+// app.get("/", function (req, res) {
+//   // res.send("Working!");
+//   res.sendFile('./index.html');
+// });
+
+var app = express();
+app.get('/', function(req, res) {
+    res.sendFile('index.html', {root: __dirname })
 });
 
 app.listen(process.env.PORT || 5000);
