@@ -1,5 +1,8 @@
 {
-  "dependencies": {
-    "nodemon": "^2.0.7"
+  "name": "myapp",
+  "description": "a really cool app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.3.0"
   }
 }
