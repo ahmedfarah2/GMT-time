@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>GMT Timezone</title>
+
+
+</head>
+
+<body onload="myFunction()">
+
+    <h1 style="
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%; width: 100%;">The current GMT time is: <span id="gmttime"></span></h1>
+
+</body>
+
+
+<script>
+
+
+
+    setInterval(function () {
+        var now = new Date();
+        var utc = new Date(now.getTime() + now.getTimezoneOffset() * 60000).toString();
+        utc = utc.substring(0, utc.lastIndexOf("+02"));
+        document.getElementById("gmttime").innerHTML = utc;
+    }, 1000);
+
+
+
+
+
+</script>
+
+</html>
