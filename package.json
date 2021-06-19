@@ -1,7 +1,7 @@
 {
   "name": "myapp",
   "description": "",
-  "main": "index.html",
+  "main": "app.js",
   "version": "1.0.0",
   "engines": {
   "node": "16.3.0"
